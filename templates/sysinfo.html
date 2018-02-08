@@ -1,0 +1,21 @@
+<html>
+<head>
+	
+</head>
+
+<body>
+<script type="text/javascript">
+	
+	let ws = new WebSocket('ws://localhost:8765')
+	ws.onmessage = (event) => {
+	  console.log(event.data)
+	}
+	ws.onopen = () => {
+	  ws.send('hello')
+    }
+</script>
+
+
+</body>
+
+</html>

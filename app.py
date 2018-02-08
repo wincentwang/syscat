@@ -1,8 +1,29 @@
 # -*- coding: utf-8 -*-
 from io import StringIO
-from wsgiref.simple_server import make_server
-from websocket_server import WebsocketServer  
+import asyncio
+import websockets
 import psutil
+import time
+import os.path
+import asyncio
+import logging
+import argparse
+import websockets
+from collections import deque
+from urllib.parse import urlparse, parse_qs
+
+ 
+async def echo(websocket, path):
+    message = await websocket.recv()
+    print('recv', message)
+    yield from websocket.send(message)
+
+start_server = websockets.serve(echo, 'localhost', 8765)
+
+asyncio.get_event_loop().run_until_complete(start_server)
+asyncio.get_event_loop().run_forever()
+
+
 
 
 def getSysInfo():

@@ -9,6 +9,8 @@
 * jinjia2
 * websockets
 * psutil
+* asyncio
+
 
 
 # Lib Installation
