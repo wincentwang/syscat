@@ -4,12 +4,14 @@
 </head>
 
 <body>
+
+<h1>WebSocket Test</h1>
 <script type="text/javascript">
-	
-	let ws = new WebSocket('ws://localhost:8765')
+	let ws = new WebSocket('ws://localhost:9092/')
 	ws.onmessage = (event) => {
 	  console.log(event.data)
 	}
+
 	ws.onopen = () => {
 	  ws.send('hello')
     }
