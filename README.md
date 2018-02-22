@@ -18,5 +18,9 @@
 * pip3 install jinja2
 * pip3 install websockets
 
+# Notification
+* TextMessage
+* Mail
+* Wechat(TODO:limited by Wechat)
 
 

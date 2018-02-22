@@ -10,7 +10,6 @@ import asyncio, os, json, time
 
 from datetime import datetime
 	
-
 from aiohttp import web
 from jinja2 import Environment, FileSystemLoader
 import logging; logging.basicConfig(level=logging.INFO)
@@ -112,7 +111,6 @@ loop = asyncio.get_event_loop()
 loop.run_until_complete(init(loop))
 
 start_server =websockets.serve(echo, '127.0.0.1', 9092)
-
 
 loop.run_until_complete(start_server)
 loop.run_forever()

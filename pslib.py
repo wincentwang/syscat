@@ -22,9 +22,12 @@ def getDisk():
 	used='%.1f G'%(psutil.disk_usage('/').used/1024/1024/1024)
 	free='%.1f G'%(psutil.disk_usage('/').free/1024/1024/1024)
 	percent='%.1f %%'%psutil.disk_usage('/').percent
-	return {'total':total,'used':used,'free':'free','percent':percent}
+	return {'total':total,'used':used,'free':free,'percent':percent}
 
 
+print(getCPUCount())
+print(getDisk())
+print(getPhyMem())
 
 
 
